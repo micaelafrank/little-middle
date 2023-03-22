@@ -1,23 +1,19 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import Home from './Home';
+import OrderForm from './OrderForm';
 import './App.css';
 
 function App() {
+  const [orderPayForm, setOrderPayForm] = useState(false)
+  
+  function toggleOrderForm() {
+    setOrderPayForm(orderPayForm => !orderPayForm)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Home />
+      <OrderForm orderPayForm={orderPayForm} toggleOrderForm={toggleOrderForm} />
     </div>
   );
 }

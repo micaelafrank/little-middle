@@ -11,3 +11,25 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.form-label{
+  margin-right: 10px;
+}
+
+.form-couplet{
+  padding-bottom: 25px;
+}
+
+.form-date{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.form-spacing{
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
