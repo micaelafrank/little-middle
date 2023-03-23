@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 // import { Elements } from "react-stripe-elements"
 import { Elements } from "@stripe/react-stripe-js"
 import { loadStripe } from "@stripe/stripe-js"
-import CheckoutForm from "./CheckoutForm"
+import CheckoutForm from "./components/CheckoutForm"
 
 const PUBLIC_KEY = "pk_test_51LNkyJFGyqtGlrO1bntRQgEes1YMTphf5qJEVJUcilwscukUrQa3HIhHtFu5dwOOus2UdsjKGRYRjcCahUPdnDDm00254IeMVb"
 const stripeTestPromise = loadStripe(PUBLIC_KEY)
