@@ -49,7 +49,7 @@ code {
 }
 
 .flexBoxRow {
-  margin: 30px;
+  margin: 10px;
   margin-bottom: 0;
   display: flex;
   flex-direction: row;
