@@ -1,11 +1,14 @@
 import React from "react";
+import NavBar from './NavBar';
+
 
 function Home(){
     return(
         <div className="homepage-layout">
+            <NavBar/>
             <div className="flexBoxRow">
                 <div className="flexBoxColumn">
-                    <h1 className="title-text">Little Middle Challah</h1>
+                    {/* <h1 className="title-text">Little Middle Challah</h1> */}
                     <div className="logo-img-container">
                         <div className="logo-image"></div>
                     </div>

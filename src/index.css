@@ -34,18 +34,15 @@ code {
   width: 60%;
 }
 
-.homepage-layout{
-  width: 95%;
-}
-
 .flexBoxColumn{
   display: flex;
   flex-direction: column;
   width: 100%;
-  justify-content: center;
+  margin-right: 1rem;
+  justify-content: left;
   align-items: left;
   text-align: left;
-  margin-left: 2%;
+  /* margin-left: 2%; */
 }
 
 .flexBoxRow {
@@ -58,9 +55,38 @@ code {
   text-align: left;
 }
 
+.flexBoxRowNav{
+  display: flex;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.flexBoxRowNavTabs {
+  justify-content: end;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+}
+
+a{
+  margin-left: 4rem;
+  font-size: 16px;
+  font-family: fantasy;
+  letter-spacing: 1.5px;
+}
+
+.flexBoxColNav{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .logo-img-container{
-  width: 650px;
-  height: 700px;
+  width: 675px;
+  height: 730px;
   margin-left: 20px;
   margin-right: 20px;
 }
@@ -73,9 +99,12 @@ code {
 
 .title-text{
   font-family: fantasy;
-  margin-bottom: 0;
   letter-spacing: 1.5px;
-  font-size: 50px;
+  font-size: 47px;
+  margin: 0;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
   font-weight: normal;
   color: rgb(206, 162, 133);
   text-shadow: 2px 1px black;
@@ -85,5 +114,9 @@ code {
   font-size: 22px;
   font-family: fantasy;
   line-height: 2;
-  margin-left: 5%;
+  margin: 0 3rem;
+}
+
+.navBarLayout{
+  margin: 1rem 2rem;
 }
