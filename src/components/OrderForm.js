@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Payment from "./Payment";
 import StripeContainer from "../StripeContainer";
+import NavBar from "./NavBar";
 
 function OrderForm({ toggleOrderForm, orderPayForm }){
     const [orderDate, setOrderDate] = useState("");
@@ -41,9 +42,12 @@ function OrderForm({ toggleOrderForm, orderPayForm }){
 
     return(
         <>
+            <NavBar/>
             <form onSubmit={handleSubmit} className="form-spacing">
                 <div className="form-couplet form-date">
-                    <p className="form-label">Order Form for {fridayDate}</p>
+                    <p style={{fontFamily:"monospace"}}>insert braid detail image here</p>
+                    <h1 className="pageTitle">Order</h1>
+                    <p className="form-subtitle">Order Form for {fridayDate}</p>
                 </div>
                 <div className="form-couplet">
                     <label className="form-label">First Name:</label>
@@ -65,7 +69,7 @@ function OrderForm({ toggleOrderForm, orderPayForm }){
                     onChange={(e) => setLastName(e.target.value)}
                     />
                 </div>
-                <div className="form-couplet">
+                {/* <div className="form-couplet">
                     <label className="form-label">Street Address:</label>
                     <input type="text" require="true" placeholder="Street Address"
                     name="address1"
@@ -103,7 +107,7 @@ function OrderForm({ toggleOrderForm, orderPayForm }){
                     value={zipCode}
                     onChange={(e) => setZipCode(e.target.value)}
                     />
-                </div>
+                </div> */}
                 <div className="form-couplet">
                     <label className="form-label">Email:</label>
                     <input type="email" placeholder="Email"
@@ -133,7 +137,7 @@ function OrderForm({ toggleOrderForm, orderPayForm }){
                     />
                 </div>
                 <div className="form-couplet">
-                    <label className="form-label">Donation:</label>
+                    <label className="form-label">Donation pledge:</label>
                     <input type="number" require="true"
                     name="donation"
                     id="donation"

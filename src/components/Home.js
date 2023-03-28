@@ -13,7 +13,11 @@ function Home(){
                         <div className="logo-image"></div>
                     </div>
                 </div>
-                <p className="info-blurb">Little Middle Challah is the brainchild of two sisters who wanted to help communities who were getting hit hardest by the pandemic. We pick a new charity each week, and 100% of what's earned is donated. Orders can be placed every Sunday for pick-up on the following Friday. New flavors every week.</p>
+                <div className="flexBoxColumnInfo">
+                    <p className="info-blurb">A selection of flavors kneaded and baked fresh every Friday.</p>
+                    <p className="info-blurb">Donate what you can — 100% of what's earned goes directly to a charity helping communities in need.</p>
+                    <p className="info-blurb">Order forms open every Sunday for pick up on the following Friday.</p>
+                </div>
             </div>
         </div>
     )
