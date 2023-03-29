@@ -11,7 +11,7 @@ function NavBar(){
                 {/* flexBoxColNav" */}
                     <NavLink className="navFont" to="/about">About</NavLink>
                     <NavLink className="navFont" to="/order">Order form</NavLink>
-                    <NavLink className="navFont">Image gallery</NavLink>
+                    <NavLink className="navFont" to="/gallery">Image gallery</NavLink>
                     <NavLink className="navFont">Where we donate</NavLink>
                     <NavLink className="navFont">Flavors</NavLink>
                 </div>
