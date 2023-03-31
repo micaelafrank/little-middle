@@ -77,6 +77,15 @@ input{
   /* margin-left: 2%; */
 }
 
+@media only screen and (max-width: 500px) {
+  .flexBoxColumn {
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
 .flexBoxRow {
   margin: 10px;
   margin-bottom: 0;
@@ -85,6 +94,15 @@ input{
   justify-content:space-evenly;
   align-items: center;
   text-align: left;
+}
+
+@media only screen and (max-width: 500px) {
+  .flexBoxRow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 }
 
 .flexBoxRowNav{
@@ -97,6 +115,16 @@ input{
   flex-direction: row;
 }
 
+@media only screen and (max-width: 500px) {
+  .flexBoxRowNav {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
 .flexBoxRowNavTabs {
   justify-content: end;
   flex-direction: row;
@@ -104,13 +132,34 @@ input{
   text-align: center;
 }
 
+@media only screen and (max-width: 500px) {
+  .flexBoxRowNavTabs {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: left;
+  }
+}
+
 .navFont{
   color: rgb(113, 77, 22);
   font-weight: 500;
-  margin-left: 4rem;
+  margin-left: 2rem;
   font-size: 18px;
   font-family: fantasy;
-  letter-spacing: 1.6px;
+  letter-spacing: 1.3px;
+}
+
+@media only screen and (max-width: 500px) {
+  .navFont {
+    margin-left: auto;
+    margin-right: auto;
+    text-transform: uppercase;
+    letter-spacing: 1.1px;
+    padding: 5px;
+    font-size: 14px;
+    text-align: left;
+  }
 }
 
 /* a{
@@ -132,6 +181,16 @@ input{
   /* margin-right: 20px; */
 }
 
+@media only screen and (max-width: 500px) {
+  .logo-img-container {
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    height: 340px;
+    margin-bottom: 2rem;
+  }
+}
+
 .logo-image{
   background-image: url('images/challah-logo.png');
   background-size: cover;
@@ -143,12 +202,23 @@ input{
   letter-spacing: 1.5px;
   font-size: 47px;
   margin: 0;
+  margin-top: 1rem;
   text-align: center;
   align-items: center;
   justify-content: center;
   font-weight: normal;
-  color: rgb(206, 162, 133);
-  text-shadow: 2px 1px black;
+  /* color: rgb(206, 162, 133);
+  text-shadow: 2px 1px black; */
+}
+
+@media only screen and (max-width: 500px) {
+  .title-text {
+    font-size: 33px;
+    font-weight: 600;
+    /* margin-top: 1rem; */
+    letter-spacing: 1px;
+    text-shadow: 1px 1px black;
+  }
 }
 
 .flexBoxColumnInfo{
@@ -157,8 +227,16 @@ input{
   justify-content: left;
   align-items: center;
   text-align: left;
-  margin: 0 3rem;
+  margin: 0 3rem 1rem 3rem;
 }
+
+@media only screen and (max-width: 500px) {
+  .flexBoxColumnInfo {
+    margin-top: 1rem;
+    justify-content: center;
+  }
+}
+
 
 .info-blurb{
   font-size: 22px;
@@ -171,8 +249,23 @@ input{
   justify-content: center; */
 }
 
+@media only screen and (max-width: 500px) {
+  .info-blurb {
+    font-size: 16px;
+    line-height: 1.8;
+    letter-spacing: 1.1px;
+    margin-bottom: 1.7rem;
+  }
+}
+
 .navBarLayout{
   margin: 1rem 2rem;
+}
+
+@media only screen and (max-width: 500px) {
+  .navBarLayout {
+    margin: 2rem;
+  }
 }
 
 .aboutText{
@@ -300,3 +393,10 @@ input#firstName, input#lastName, input#phone, input#email, input#plainFlavor, in
   letter-spacing: 1.2px;
   text-transform: uppercase;
 }
+
+
+/* @media only screen and (max-width: 500px) {
+  body {
+    background-color: lightblue;
+  }
+} */

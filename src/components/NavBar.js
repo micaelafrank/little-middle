@@ -13,7 +13,6 @@ function NavBar(){
                     <NavLink className="navFont" to="/order">Order form</NavLink>
                     <NavLink className="navFont" to="/gallery">Image gallery</NavLink>
                     <NavLink className="navFont">Where we donate</NavLink>
-                    <NavLink className="navFont">Flavors</NavLink>
                 </div>
             </div>
         </nav>
