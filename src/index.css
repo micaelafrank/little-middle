@@ -170,25 +170,44 @@ code {
   text-align: center;
 }
 
-.imageContainer {
-  height: 400px;
-  width: 400px;
-  display: block;
+/* .imageContainer {
+  height: 500px;
+  width: 300px;
+  display: flex;
   margin: 2rem 2rem 2rem 2rem;
   align-items: center;
+} */
+
+.oneImageContainer{
+  height: 480px;
+  width: 320px;
+  flex-direction: column;
+  margin: 2rem 2rem 2rem 2rem;
+  align-items: center;
+  justify-content: center;
 }
 
 .imageStyle{
-  background-size: contain;
+  background-size: cover;
   position: center;
+  image-orientation: center;
   background-repeat: no-repeat;
+  background-position: center;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  height: 420px;
   width: auto;
 }
 
-/* #pic1{
+.imageCaption{
+  font-family: fantasy;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 1.4px;
+  text-align: center;
+}
+
+#pic1{
   align-self: center;
   background-image: url('images/challah0.jpeg');
 }
@@ -231,14 +250,16 @@ code {
 
 #pic11{
   background-image: url('images/challah9.png');
-} */
+} 
 
 .flexRowGrid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  width: 90%;
+  width: 80%;
+  height: 100%;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 2rem;
   place-items: center;
   /* height: 400px; */
   justify-content: center;
