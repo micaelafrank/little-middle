@@ -173,7 +173,7 @@ code {
 .imageContainer {
   height: 400px;
   width: 400px;
-  display: grid;
+  display: block;
   margin: 2rem 2rem 2rem 2rem;
   align-items: center;
 }
@@ -188,7 +188,7 @@ code {
   width: auto;
 }
 
-#pic1{
+/* #pic1{
   align-self: center;
   background-image: url('images/challah0.jpeg');
 }
@@ -231,7 +231,7 @@ code {
 
 #pic11{
   background-image: url('images/challah9.png');
-}
+} */
 
 .flexRowGrid {
   display: grid;
