@@ -13,12 +13,24 @@ function OrderForm({ toggleOrderForm, orderPayForm }){
     const [city, setCity] = useState("");
     const [zipCode, setZipCode] = useState("");
     const [phone, setPhone] = useState("");
-    const [orderQuantity, setOrderQuantity] = useState("");
+    // const [orderQuantity, setOrderQuantity] = useState("");
     const [donation, setDonation] = useState("");
+    const [plainFlavor, setPlainFlavor] = useState("");
+    const [chocChipFlavor, setChocChipFlavor] = useState("");
 
     // const [showPayment, setShowPayment] = useState(false);
     // const [showCheckout, setShowCheckout] = useState(false)
-    const fridayDate = "March 24, 2023";
+    const curr = new Date();
+    const today = `${curr.getMonth() + 1}/${curr.getDate()}/${curr.getFullYear()}`;
+    console.log("today's date: ", today);
+
+    const firstday = new Date(curr.setDate(curr.getDate() - curr.getDay()));
+    const fridayDate = new Date(curr.setDate(curr.getDate() - curr.getDay() + 5));
+    const friDate = `${fridayDate.getMonth()+1}/${fridayDate.getDate()}/${fridayDate.getFullYear()}`;
+
+    console.log("testing: ", friDate);
+    console.log("first day: ", firstday);
+    console.log("last day: ", fridayDate);
     const newDonation = parseFloat(donation).toFixed(2);
     console.log(newDonation);
 
@@ -32,9 +44,10 @@ function OrderForm({ toggleOrderForm, orderPayForm }){
 
     function handleSubmit(e){
         e.preventDefault();
+        setOrderDate(friDate);
         fetch("/orders", {
             method: "POST",
-            body: JSON.stringify({ firstName, lastName, email, address1, address2, city, zipCode, phone, orderQuantity, donation }),
+            body: JSON.stringify({ orderDate, firstName, lastName, email, address1, address2, city, zipCode, phone, plainFlavor, chocChipFlavor, donation }),
         }).then(res => res.json())
         .then(data => console.log(data));
         toggleOrderForm();
@@ -46,8 +59,8 @@ function OrderForm({ toggleOrderForm, orderPayForm }){
             <form onSubmit={handleSubmit} className="form-spacing">
                 <div className="form-couplet form-date">
                     <p style={{fontFamily:"monospace"}}>insert braid detail image here</p>
-                    <h1 className="pageTitle">Order</h1>
-                    <p className="form-subtitle">Order Form for {fridayDate}</p>
+                    <h1 className="pageTitle">Order Form</h1>
+                    <p className="form-subtitle boldText">{friDate}</p>
                 </div>
                 <div className="form-couplet">
                     <label className="form-label">First Name:</label>
@@ -127,18 +140,30 @@ function OrderForm({ toggleOrderForm, orderPayForm }){
                     onChange={(e) => setPhone(e.target.value)} 
                     />
                 </div>
+                <p className="font" style={{paddingBottom:"18px", margin: "0"}}><i>**Maximum of 4 challahs total:</i></p>
                 <div className="form-couplet">
-                    <label className="form-label">Order Quantity:</label>
+                    <label className="form-label">Olive Oil Rosemary Challah Quantity:</label>
                     <input type="number" require="true"
-                    name="orderQuantity"
-                    id="orderQuantity"
-                    value={orderQuantity}
-                    onChange={(e) => setOrderQuantity(e.target.value)} 
+                    name="plainFlavor" style={{paddingRight:"0"}}
+                    id="plainFlavor"
+                    placeholder="0"
+                    value={plainFlavor}
+                    onChange={(e) => setPlainFlavor(e.target.value)} 
+                    />
+                </div>
+                <div className="form-couplet">
+                    <label className="form-label">Chocolate Chip Challah Quantity:</label>
+                    <input type="number" require="true" placeholder="0"
+                        name="chocChipFlavor" style={{paddingRight:"0"}}
+                    id="chocChipFlavor"
+                    value={chocChipFlavor}
+                    onChange={(e) => setChocChipFlavor(e.target.value)}
                     />
                 </div>
                 <div className="form-couplet">
                     <label className="form-label">Donation pledge:</label>
-                    <input type="number" require="true"
+                    <input 
+                    type="number" require="true" placeholder="$"
                     name="donation"
                     id="donation"
                     value={donation}

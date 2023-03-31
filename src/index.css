@@ -16,13 +16,32 @@ code {
   margin-right: 10px;
 }
 
+.boldText{
+  font-weight: bolder;
+}
+
 .form-subtitle{
-  font-family: monospace;
-  letter-spacing: 1.4px;
+  font-family: fantasy;
+  font-size: 20px;
+  color: rgb(206, 162, 133);
+  text-shadow: 1px 1px black;
+  letter-spacing: 2px;
+  margin: 0 0 2rem 0;
+  font-weight: bold;
 }
 
 .form-couplet{
-  padding-bottom: 25px;
+  padding-bottom: 35px;
+}
+
+form{
+  font-family: fantasy;
+  font-size: 22px;
+  letter-spacing: 1.1px;
+}
+
+.font{
+  font-family: fantasy;
 }
 
 .form-date{
@@ -30,7 +49,15 @@ code {
   margin-left: auto;
   margin-right: auto;
   font-weight: bold;
-  margin-bottom: 10px;
+}
+
+input{
+  border-bottom: 1px solid black;
+  padding-right: 30px;
+  border-top: 0;
+  border-left: 0;
+  margin-left: 10px;
+  border-right: 0;
 }
 
 .form-spacing{
@@ -166,7 +193,7 @@ code {
   font-weight: normal;
   letter-spacing: 1.8px;
   margin-top: 3rem;
-  margin-bottom: 2rem;
+  margin-bottom: .5rem;
   text-align: center;
 }
 
@@ -264,4 +291,12 @@ code {
   /* height: 400px; */
   justify-content: center;
   align-items: center;
+}
+
+input#firstName, input#lastName, input#phone, input#email, input#plainFlavor, input#chocChipFlavor, input#donation{
+  padding-left: 10px;
+  font-family: fantasy;
+  font-size: 15px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
 }
