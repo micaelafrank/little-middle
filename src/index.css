@@ -307,6 +307,14 @@ input{
   justify-content: center;
 }
 
+@media only screen and (max-width: 500px) {
+  .oneImageContainer {
+    height: 360px;
+    width: 280px;  
+    margin: 1rem;
+  }
+}
+
 .imageStyle{
   background-size: cover;
   position: center;
@@ -319,12 +327,26 @@ input{
   width: auto;
 }
 
+@media only screen and (max-width: 500px) {
+  .imageStyle {
+    height: 310px;
+    width: auto;
+    margin: 1rem;
+  }
+}
+
 .imageCaption{
   font-family: fantasy;
   font-size: 16px;
   font-weight: bold;
   letter-spacing: 1.4px;
   text-align: center;
+}
+
+@media only screen and (max-width: 500px) {
+  .imageCaption {
+    font-size: 12px;
+  }
 }
 
 #pic1{
@@ -384,6 +406,13 @@ input{
   /* height: 400px; */
   justify-content: center;
   align-items: center;
+}
+
+@media only screen and (max-width: 500px) {
+  .flexRowGrid {
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+  }
 }
 
 input#firstName, input#lastName, input#phone, input#email, input#plainFlavor, input#chocChipFlavor, input#donation{
