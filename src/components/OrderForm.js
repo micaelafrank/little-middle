@@ -62,6 +62,7 @@ function OrderForm({ toggleOrderForm, orderPayForm }){
                     <h1 className="pageTitle">Order Form</h1>
                     <p className="form-subtitle boldText">{friDate}</p>
                 </div>
+                <p>Order forms open every Sunday at 12:00 PM PT and close on Thursdays at 5:00 PM PT.</p>
                 <div className="form-couplet">
                     <label className="form-label">First Name:</label>
                     <input type="text" 
